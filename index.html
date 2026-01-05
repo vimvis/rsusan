@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>2026 R수산 운영계획</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Pretendard', sans-serif; background-color: #f0f2f5; -webkit-font-smoothing: antialiased; }
+        
+        /* 모바일 앱 뷰 컨테이너 */
+        .app-container {
+            max-width: 480px; /* 모바일 너비 제한 */
+            margin: 0 auto;
+            background-color: #ffffff;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            position: relative;
+            padding-bottom: 80px; /* 하단 여백 */
+        }
+
+        /* 가로 스크롤 스냅 (카드 스와이프) */
+        .horizontal-scroll {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 16px;
+            padding: 0 20px;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .horizontal-scroll::-webkit-scrollbar { display: none; }
+        .snap-card {
+            scroll-snap-align: center;
+            flex: 0 0 85%; /* 화면의 85% 차지 */
+        }
+
+        /* 아코디언 애니메이션 */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 500px; /* 충분한 높이 */
+            transition: max-height 0.5s ease-in;
+        }
+        .accordion-icon {
+            transition: transform 0.3s;
+        }
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        /* 페이드인 애니메이션 */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="app-container">
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 px-5 py-4 flex justify-between items-center">
+        <h1 class="text-lg font-bold text-slate-800">2026 R수산</h1>
+        <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">PLAN</span>
+    </header>
+
+    <section class="px-6 pt-10 pb-12">
+        <div class="fade-in-section">
+            <span class="text-blue-600 font-bold tracking-wider text-sm mb-2 block">HR COMMUNITY</span>
+            <h2 class="text-3xl font-extrabold leading-tight text-slate-900 mb-4">
+                변화하는 시대,<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">고민하고 생각하는</span><br>
+                HR
+            </h2>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">
+                2026년, R수산은 단순한 친목을 넘어<br>
+                현업에 연결되는 <strong>실질적 배움</strong>을 지향합니다.
+            </p>
+            <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                <p class="text-slate-700 font-medium text-sm">
+                    "새로운 환경을 학습하는 역량이<br>어떤 경험보다 큰 가치를 가집니다."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-10 bg-slate-50 fade-in-section">
+        <div class="px-6 mb-4 flex justify-between items-end">
+            <h3 class="text-xl font-bold text-slate-800">운영 목표</h3>
+            <span class="text-xs text-slate-400">옆으로 넘겨보세요 👉</span>
+        </div>
+        
+        <div class="horizontal-scroll pb-4">
+            <div class="snap-card bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-xl mb-4">🎯</div>
+                <h4 class="font-bold text-lg mb-2">역할의 재정의</h4>
+                <p class="text-sm text-slate-500 leading-relaxed">변화하는 시대 속에서 HR의 역할과 판단 기준을 원점에서 다시 정의합니다.</p>
+            </div>
+            <div class="snap-card bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-xl mb-4">🌱</div>
+                <h4 class="font-bold text-lg mb-2">실천적 변화</h4>
+                <p class="text-sm text-slate-500 leading-relaxed">트렌드 공유를 넘어, 실제 업무와 생각이 달라지는 '작은 실험'을 만듭니다.</p>
+            </div>
+            <div class="snap-card bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-xl mb-4">💡</div>
+                <h4 class="font-bold text-lg mb-2">더 나은 질문</h4>
+                <p class="text-sm text-slate-500 leading-relaxed">정답을 찾기보다, 함께 더 나은 질문을 만들어가는 학습 공동체를 지향합니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-5 py-12">
+        <h3 class="text-xl font-bold text-slate-800 mb-6 px-1">2026 시즌 일정</h3>
+        
+        <div class="space-y-4">
+            <div class="accordion-item bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden fade-in-section">
+                <div class="flex items-center p-4 cursor-pointer" onclick="toggleAccordion(this)">
+                    <div class="flex-shrink-0 w-12 text-center mr-4">
+                        <div class="text-xs text-slate-400 font-bold">FEB</div>
+                        <div class="text-xl font-extrabold text-blue-600">18</div>
+                    </div>
+                    <div class="flex-grow">
+                        <h4 class="font-bold text-slate-800 text-sm">전례 없는 변화의 시대</h4>
+                        <p class="text-xs text-slate-500 mt-1">우리는 무엇을 기준으로 판단하는가</p>
+                    </div>
+                    <svg class="accordion-icon w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="accordion-content bg-slate-50">
+                    <div class="p-4 pt-0 text-sm text-slate-600 border-t border-slate-100 mt-2 pt-3">
+                        <ul class="list-disc list-inside space-y-1 text-xs">
+                            <li>예측이 어려운 시대, 기존 HR 전제의 유효성</li>
+                            <li>이번 변화는 사이클인가, 구조적 단절인가</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden fade-in-section">
+                <div class="flex items-center p-4 cursor-pointer" onclick="toggleAccordion(this)">
+                    <div class="flex-shrink-0 w-12 text-center mr-4">
+                        <div class="text-xs text-slate-400 font-bold">APR</div>
+                        <div class="text-xl font-extrabold text-blue-600">15</div>
+                    </div>
+                    <div class="flex-grow">
+                        <h4 class="font-bold text-slate-800 text-sm">기업의 변화와 새로운 정의</h4>
+                        <p class="text-xs text-slate-500 mt-1">성장, 고용, 인력에 대한 시각</p>
+                    </div>
+                    <svg class="accordion-icon w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="accordion-content bg-slate-50">
+                    <div class="p-4 pt-0 text-sm text-slate-600 border-t border-slate-100 mt-2 pt-3">
+                        <ul class="list-disc list-inside space-y-1 text-xs">
+                            <li>성장 둔화 시대의 고용 정당화</li>
+                            <li>인력 규모 외의 조직 설명 지표 찾기</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden fade-in-section">
+                <div class="flex items-center p-4 cursor-pointer" onclick="toggleAccordion(this)">
+                    <div class="flex-shrink-0 w-12 text-center mr-4">
+                        <div class="text-xs text-slate-400 font-bold">JUN</div>
+                        <div class="text-xl font-extrabold text-blue-600">17</div>
+                    </div>
+                    <div class="flex-grow">
+                        <h4 class="font-bold text-slate-800 text-sm">Digital & AI Transformation</h4>
+                        <p class="text-xs text-slate-500 mt-1">기술은 HR의 역할을 어떻게 바꾸는가</p>
+                    </div>
+                    <svg class="accordion-icon w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="accordion-content bg-slate-50">
+                    <div class="p-4 pt-0 text-sm text-slate-600 border-t border-slate-100 mt-2 pt-3">
+                        <ul class="list-disc list-inside space-y-1 text-xs">
+                            <li>AI: 효율 도구인가, 권한 변수인가</li>
+                            <li>자동화 이후 HR이 책임질 영역</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden fade-in-section">
+                <div class="flex items-center p-4 cursor-pointer" onclick="toggleAccordion(this)">
+                    <div class="flex-shrink-0 w-12 text-center mr-4">
+                        <div class="text-xs text-slate-400 font-bold">AUG</div>
+                        <div class="text-xl font-extrabold text-blue-600">19</div>
+                    </div>
+                    <div class="flex-grow">
+                        <h4 class="font-bold text-slate-800 text-sm">HR의 변화: 버림과 채움</h4>
+                        <p class="text-xs text-slate-500 mt-1">무엇을 버리고 새로 가져야 하는가</p>
+                    </div>
+                    <svg class="accordion-icon w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="accordion-content bg-slate-50">
+                    <div class="p-4 pt-0 text-sm text-slate-600 border-t border-slate-100 mt-2 pt-3">
+                        <ul class="list-disc list-inside space-y-1 text-xs">
+                            <li>미래의 HR vs 지금의 HR</li>
+                            <li>더 이상 하지 않아야 할 역할</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item bg-indigo-50 rounded-xl shadow-sm border border-indigo-100 overflow-hidden fade-in-section">
+                <div class="flex items-center p-4 cursor-pointer" onclick="toggleAccordion(this)">
+                    <div class="flex-shrink-0 w-12 text-center mr-4">
+                        <div class="text-xs text-indigo-400 font-bold">OCT</div>
+                        <div class="text-xl font-extrabold text-indigo-600">WS</div>
+                    </div>
+                    <div class="flex-grow">
+                        <h4 class="font-bold text-indigo-900 text-sm">변하지 않는 것과 선택</h4>
+                        <p class="text-xs text-indigo-500 mt-1">워크숍 (10.16-17)</p>
+                    </div>
+                    <svg class="accordion-icon w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="accordion-content bg-white">
+                    <div class="p-4 pt-0 text-sm text-slate-600 border-t border-indigo-100 mt-2 pt-3">
+                        <p class="text-xs leading-relaxed">
+                            기술과 환경이 바뀌어도 변하지 않는 본질은 무엇인지, 리더로서 내려야 할 현실적 선택은 무엇인지 치열하게 고민합니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="bg-white py-12 px-6 fade-in-section">
+        <h3 class="text-xl font-bold text-slate-800 mb-6 text-center">어떻게 배우나요?</h3>
+        
+        <div class="grid grid-cols-2 gap-4">
+            <div class="bg-slate-50 p-4 rounded-xl text-center">
+                <div class="text-2xl mb-2">🎤</div>
+                <div class="text-sm font-bold mb-1">키노트</div>
+                <div class="text-xs text-slate-500">관점 전환 &<br>프레임 제시</div>
+            </div>
+            <div class="bg-slate-50 p-4 rounded-xl text-center">
+                <div class="text-2xl mb-2">📚</div>
+                <div class="text-sm font-bold mb-1">발제 (2인)</div>
+                <div class="text-xs text-slate-500">구조적/이론적<br>심층 탐구</div>
+            </div>
+            <div class="bg-slate-50 p-4 rounded-xl text-center col-span-2 flex items-center justify-between px-8">
+                <div class="text-left">
+                    <div class="text-sm font-bold mb-1">Discussion</div>
+                    <div class="text-xs text-slate-500">인상 깊은 문장 중심 토론</div>
+                </div>
+                <div class="text-3xl">💬</div>
+            </div>
+        </div>
+
+        <div class="mt-6 bg-blue-600 rounded-xl p-5 text-white shadow-lg relative overflow-hidden">
+            <div class="relative z-10">
+                <h4 class="font-bold text-lg mb-2">🔬 작은 실험 (Action)</h4>
+                <p class="text-xs opacity-90 leading-relaxed">
+                    숙제가 아닙니다. 업무 속에서 가볍게 시도해보는 실천입니다. 성공/실패보다 "무엇이 달라졌는지"를 공유합니다.
+                </p>
+            </div>
+            <div class="absolute right-0 bottom-0 w-24 h-24 bg-white opacity-10 rounded-full translate-x-1/3 translate-y-1/3"></div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-white px-6 py-12 text-center">
+        <h2 class="text-xl font-bold mb-4">함께하는 여정</h2>
+        <p class="text-sm text-slate-400 leading-relaxed mb-8">
+            바쁘신 가운데 함께해주시는 만큼,<br>
+            의미 있고 밀도 있는 시간으로<br>
+            보답드리겠습니다.
+        </p>
+        <div class="text-xs text-slate-600 border-t border-slate-800 pt-6">
+            © 2026 R수산 HR Community
+        </div>
+    </footer>
+
+    </div>
+
+<script>
+    // Accordion Logic
+    function toggleAccordion(element) {
+        const item = element.parentElement;
+        const isActive = item.classList.contains('active');
+        
+        // Close all others (optional - for better focus)
+        document.querySelectorAll('.accordion-item').forEach(acc => {
+            acc.classList.remove('active');
+        });
+
+        if (!isActive) {
+            item.classList.add('active');
+        }
+    }
+
+    // Scroll Animation Observer
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target); // Play once
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in-section').forEach(section => {
+        observer.observe(section);
+    });
+</script>
+
+</body>
+</html>
